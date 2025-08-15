@@ -1,6 +1,6 @@
 package com.example.dbapp.DbApplication.dao.impl;
 
-import com.example.dbapp.DbApplication.dao.impl.AuthorDaoImpl;
+import com.example.dbapp.DbApplication.TestDataUtil;
 import com.example.dbapp.DbApplication.domain.Author;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -9,7 +9,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
@@ -26,11 +25,8 @@ public class AuthorDaoImplTests {
 
     @Test
     public void testThatCreateAuthorGeneratesCorrectSql() {
-        Author author = Author.builder()
-                .id(1L)
-                .name("John Doe")
-                .age(30)
-                .build();
+        Author author = TestDataUtil.createTestAuthorA();
+
         underTest.create(author);
 
         verify(jdbcTemplate).update(
@@ -47,6 +43,38 @@ public class AuthorDaoImplTests {
                 eq("SELECT id, name, age FROM authors WHERE id = ? LIMIT 1"),
                 ArgumentMatchers.<AuthorDaoImpl.AuthorRowMapper>any(),
                 eq(1L)
+        );
+    }
+
+    @Test
+    public void testThatFindManyGeneratesCorrectSql() {
+        underTest.find();
+
+        verify(jdbcTemplate).query(
+                eq("SELECT id, name, age FROM authors"),
+                ArgumentMatchers.<AuthorDaoImpl.AuthorRowMapper>any()
+        );
+    }
+
+    @Test
+    public void testThatUpdateGeneratesCorrectSql() {
+        Author author = TestDataUtil.createTestAuthorA();
+
+        underTest.update(author, 3L);
+
+        verify(jdbcTemplate).update(
+                "UPDATE authors SET id = ?, name = ?, age = ? WHERE id = ?",
+                1L, "John Doe", 30, 3L
+        );
+    }
+
+    @Test
+    public void testThatDeleteGeneratesCorrectSql() {
+        underTest.delete(1L);
+
+        verify(jdbcTemplate).update(
+                "DELETE FROM authors WHERE id = ?",
+                1L
         );
     }
 }

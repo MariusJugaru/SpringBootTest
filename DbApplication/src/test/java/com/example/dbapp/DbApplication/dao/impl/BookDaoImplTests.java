@@ -1,6 +1,6 @@
 package com.example.dbapp.DbApplication.dao.impl;
 
-import com.example.dbapp.DbApplication.dao.impl.BookDaoImpl;
+import com.example.dbapp.DbApplication.TestDataUtil;
 import com.example.dbapp.DbApplication.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,7 +14,7 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-public class BookDaoImplsTests {
+public class BookDaoImplTests {
 
     @Mock
     private JdbcTemplate jdbcTemplate;
@@ -24,11 +24,7 @@ public class BookDaoImplsTests {
 
     @Test
     public void testThatCreateBookGeneratesCorrectSql() {
-        Book book = Book.builder()
-                .isbn("2314")
-                .title("The book")
-                .authorId(1L)
-        .build();
+        Book book = TestDataUtil.createTestBookA();
 
         underTest.create(book);
 
@@ -47,6 +43,37 @@ public class BookDaoImplsTests {
                 eq("SELECT isbn, title, author_id FROM books WHERE isbn = ? LIMIT 1"),
                 ArgumentMatchers.<BookDaoImpl.BookRowMapper>any(),
                 eq("2314")
+        );
+    }
+
+    @Test
+    public void testThatFindsManyGeneratesCorrectSql() {
+        underTest.find();
+
+        verify(jdbcTemplate).query(
+                eq("SELECT isbn, title, author_id FROM books"),
+                ArgumentMatchers.<BookDaoImpl.BookRowMapper>any());
+    }
+
+    @Test
+    public void testThatUpdatesBookGeneratesCorrectSql() {
+        Book book = TestDataUtil.createTestBookA();
+
+        underTest.update(book, book.getIsbn());
+
+        verify(jdbcTemplate).update(
+                "UPDATE books SET isbn = ?, title = ?, author_id = ? WHERE isbn = ?",
+                "2314", "The book", 1L, "2314"
+        );
+    }
+
+    @Test
+    public void testThatDeleteBookGeneratesCorrectSql() {
+        underTest.delete("2314");
+
+        verify(jdbcTemplate).update(
+                "DELETE FROM books WHERE isbn = ?",
+                "2314"
         );
     }
 }
