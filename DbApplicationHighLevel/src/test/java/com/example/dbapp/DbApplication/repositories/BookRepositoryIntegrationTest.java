@@ -1,0 +1,100 @@
+package com.example.dbapp.DbApplication.repositories;
+
+import com.example.dbapp.DbApplication.TestDataUtil;
+import com.example.dbapp.DbApplication.domain.Book;
+import com.example.dbapp.DbApplication.domain.Author;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import java.util.List;
+import java.util.Optional;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+@SpringBootTest
+@ExtendWith(SpringExtension.class)
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
+public class BookRepositoryIntegrationTest {
+
+    private BookRepository underTest;
+
+    @Autowired
+    public BookRepositoryIntegrationTest(BookRepository underTest) {
+        this.underTest = underTest;
+    }
+
+    @Test
+    public void testThatBookCanBeCratedAndRecalled() {
+        Author author = TestDataUtil.createTestAuthorA();
+        Book book = TestDataUtil.createTestBookA(author);
+        underTest.save(book);
+        Book savedBook = underTest.save(book);
+
+        Optional<Book> result = underTest.findById(book.getIsbn());
+
+        assertThat(result).isPresent();
+        assertThat(result.get()).isEqualTo(savedBook);
+    }
+
+//    @Test
+//    public void testThatMultipleBooksCanBeCreatedAndRecalled() {
+//        Author authorA = TestDataUtil.createTestAuthorA();
+//        Author authorB = TestDataUtil.createTestAuthorB();
+//        Author authorC = TestDataUtil.createTestAuthorC();
+//
+//        authorDao.create(authorA);
+//        authorDao.create(authorB);
+//        authorDao.create(authorC);
+//
+//        Book bookA = TestDataUtil.createTestBookA();
+//        Book bookB = TestDataUtil.createTestBookB();
+//        Book bookC = TestDataUtil.createTestBookC();
+//        bookA.setAuthorId(authorA.getId());
+//        bookB.setAuthorId(authorA.getId());
+//        bookC.setAuthorId(authorC.getId());
+//
+//        underTest.create(bookA);
+//        underTest.create(bookB);
+//        underTest.create(bookC);
+//
+//        List<Book> result = underTest.find();
+//        assertThat(result)
+//                .hasSize(3)
+//                .containsExactly(bookA, bookB, bookC);
+//    }
+//
+//    @Test
+//    public void testThatBookCanBeUpdated() {
+//        Author author = TestDataUtil.createTestAuthorA();
+//        authorDao.create(author);
+//
+//        Book book = TestDataUtil.createTestBookA();
+//        book.setAuthorId(author.getId());
+//        underTest.create(book);
+//
+//        book.setTitle("New title");
+//        underTest.update(book, book.getIsbn());
+//
+//        Optional<Book> result = underTest.findOne(book.getIsbn());
+//        assertThat(result).isPresent();
+//        assertThat(result.get()).isEqualTo(book);
+//    }
+//
+//    @Test
+//    public void testThatBookCanBeDeleted() {
+//        Author author = TestDataUtil.createTestAuthorA();
+//        authorDao.create(author);
+//
+//        Book book = TestDataUtil.createTestBookA();
+//        book.setAuthorId(author.getId());
+//        underTest.create(book);
+//        underTest.delete(book.getIsbn());
+//        Optional<Book> result = underTest.findOne(book.getIsbn());
+//
+//        assertThat(result).isEmpty();
+//    }
+}
