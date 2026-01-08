@@ -5,8 +5,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82f238e8-c7bd-4eb7-afa6-8cdb1e41d90d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/colors/src/main/java/com/colors/colors/Impl/BluePrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplication/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplication/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplication/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplication/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplication/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplication/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplication/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplication/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplication/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplication/src/main/java/com/example/dbapp/DbApplication/DbApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplication/src/main/java/com/example/dbapp/DbApplication/DbApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplication/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplication/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplication/src/test/java/com/example/dbapp/DbApplication/DbApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplication/src/test/java/com/example/dbapp/DbApplication/DbApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplicationHighLevel/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplicationHighLevel/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplicationHighLevel/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplicationHighLevel/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplicationHighLevel/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplicationHighLevel/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplicationHighLevel/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplicationHighLevel/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplicationHighLevel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplicationHighLevel/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplicationHighLevel/src/main/java/com/example/dbapp/DbApplication/DbApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplicationHighLevel/src/main/java/com/example/dbapp/DbApplication/DbApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplicationHighLevel/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplicationHighLevel/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbApplicationHighLevel/src/test/java/com/example/dbapp/DbApplication/DbApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/DbApplicationHighLevel/src/test/java/com/example/dbapp/DbApplication/DbApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colors/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/colors/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colors/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/colors/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colors/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/colors/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colors/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/colors/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colors/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/colors/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colors/src/main/java/com/colors/colors/ColorsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/colors/src/main/java/com/colors/colors/ColorsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colors/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/colors/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colors/src/test/java/com/colors/colors/ColorsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/colors/src/test/java/com/colors/colors/ColorsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/database/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/database/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/database/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/db/database/DatabaseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/database/src/main/java/com/db/database/DatabaseApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/database/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/test/java/com/db/database/DatabaseApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/database/src/test/java/com/db/database/DatabaseApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizza/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/pizza/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizza/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/pizza/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizza/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pizza/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizza/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/pizza/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizza/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/pizza/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizza/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pizza/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizza/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pizza/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreeSQL/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/postgreeSQL/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreeSQL/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/postgreeSQL/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreeSQL/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/postgreeSQL/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreeSQL/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/postgreeSQL/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreeSQL/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/postgreeSQL/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreeSQL/src/main/java/com/db/postgreeSQL/PostgreeSqlApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/postgreeSQL/src/main/java/com/db/postgreeSQL/PostgreeSqlApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreeSQL/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/postgreeSQL/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreeSQL/src/test/java/com/db/postgreeSQL/PostgreeSqlApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/postgreeSQL/src/test/java/com/db/postgreeSQL/PostgreeSqlApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quickstart/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quickstart/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quickstart/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quickstart/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quickstart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quickstart/src/main/java/com/springtest/quickstart/QuickstartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart/src/main/java/com/springtest/quickstart/QuickstartApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quickstart/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quickstart/src/test/java/com/springtest/quickstart/QuickstartApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart/src/test/java/com/springtest/quickstart/QuickstartApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_library/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/small_library/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_library/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/small_library/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_library/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/small_library/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_library/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/small_library/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_library/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/small_library/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_library/src/main/java/com/library/small_library/SmallLibraryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/small_library/src/main/java/com/library/small_library/SmallLibraryApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_library/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/small_library/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_library/src/test/java/com/library/small_library/SmallLibraryApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/small_library/src/test/java/com/library/small_library/SmallLibraryApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_starter/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/web_starter/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_starter/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/web_starter/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_starter/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web_starter/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_starter/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/web_starter/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web_starter/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_starter/src/main/java/com/springweb/web_starter/WebStarterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web_starter/src/main/java/com/springweb/web_starter/WebStarterApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_starter/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web_starter/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_starter/src/test/java/com/springweb/web_starter/WebStarterApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web_starter/src/test/java/com/springweb/web_starter/WebStarterApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,13 +98,13 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="30sGUgeKQPCZljE9lq1cXbB9e72" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,15 +112,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/GitHub/SpringBootTest/colors",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/GitHub/SpringBootTest",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,6 +163,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -98,6 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1754408888652</updated>
       <workItem from="1754408889805" duration="3426000" />
+      <workItem from="1767861651214" duration="102000" />
     </task>
     <servers />
   </component>

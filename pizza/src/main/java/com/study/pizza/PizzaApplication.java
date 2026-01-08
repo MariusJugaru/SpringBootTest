@@ -1,16 +1,16 @@
-package pizzeria.pizza;
+package com.study.pizza;
 
+import com.study.pizza.config.PizzaConfig;
 import lombok.extern.java.Log;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import pizzeria.pizza.config.PizzaConfig;
 
-@Log
 @SpringBootApplication
+@Log
 public class PizzaApplication implements CommandLineRunner {
 
-	PizzaConfig pizzaConfig;
+	private final PizzaConfig pizzaConfig;
 
 	public PizzaApplication(PizzaConfig pizzaConfig) {
 		this.pizzaConfig = pizzaConfig;
@@ -22,9 +22,12 @@ public class PizzaApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		log.info(String.format("I want a %s crust pizza, with %s and %s sauce",
-				pizzaConfig.getCrust(),
-				pizzaConfig.getTopping(),
-				pizzaConfig.getSauce()));
+		log.info(
+				String.format("I want a pizza with %s sauce, for toppings %s and %s crust",
+						pizzaConfig.getSauce(),
+						pizzaConfig.getTopping(),
+						pizzaConfig.getCrust())
+		);
+
 	}
 }

@@ -1,4 +1,4 @@
-package pizzeria.pizza.config;
+package com.study.pizza.config;
 
 
 import lombok.AllArgsConstructor;
