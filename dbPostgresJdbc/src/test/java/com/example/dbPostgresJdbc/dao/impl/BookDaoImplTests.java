@@ -1,9 +1,11 @@
-package com.example.dbPostgresJdbc.dao;
+package com.example.dbPostgresJdbc.dao.impl;
 
+import com.example.dbPostgresJdbc.TestDataUtil;
 import com.example.dbPostgresJdbc.dao.imp.BookDaoImpl;
 import com.example.dbPostgresJdbc.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -23,17 +25,24 @@ public class BookDaoImplTests {
 
     @Test
     public void testThatCreateBookGeneratesCorrectSql() {
-        Book book = Book.builder()
-                .isbn("123-232")
-                .title("Marry Road")
-                .author_id(1L)
-                .build();
+        Book book = TestDataUtil.createTestBook();
 
         underTest.create(book);
 
         verify(jdbcTemplate).update(
                 eq("INSERT INTO books (isbn, title, author_id) VALUES (?, ?, ?)"),
                 eq("123-232"), eq("Marry Road"), eq(1L)
+        );
+    }
+
+    @Test
+    public void testThatFindOneGeneratesCorrectSql() {
+        underTest.findOne("123_abc_456");
+
+        verify(jdbcTemplate).query(
+                eq("SELECT isbn, title, author_id FROM books WHERE isbn = ? LIMIT 1"),
+                ArgumentMatchers.<BookDaoImpl.BookRowMapper>any(),
+                eq("123_abc_456")
         );
     }
 }

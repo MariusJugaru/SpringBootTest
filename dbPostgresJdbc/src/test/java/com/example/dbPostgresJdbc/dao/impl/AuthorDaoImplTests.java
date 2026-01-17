@@ -1,9 +1,11 @@
-package com.example.dbPostgresJdbc.dao;
+package com.example.dbPostgresJdbc.dao.impl;
 
+import com.example.dbPostgresJdbc.TestDataUtil;
 import com.example.dbPostgresJdbc.dao.imp.AuthorDaoImpl;
 import com.example.dbPostgresJdbc.domain.Author;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -23,16 +25,23 @@ public class AuthorDaoImplTests {
 
     @Test
     public void testThatCreatesAuthorGeneratesCorrectSql() {
-        Author author = Author.builder()
-                .id(1L)
-                .age(39)
-                .name("Rose Chrystal")
-                .build();
+        Author author = TestDataUtil.createTestAuthor();
 
         underTest.create(author);
         verify(jdbcTemplate).update(
                 eq("INSERT INTO authors (id, name, age) VALUES (?, ?, ?)"),
                 eq(1L), eq("Rose Chrystal"), eq(39)
+        );
+    }
+
+    @Test
+    public void testThatFindOneGeneratesCorrectSql() {
+        underTest.findOne(1L);
+
+        verify(jdbcTemplate).query(
+                eq("SELECT id, name, age FROM authors WHERE id = ? LIMIT 1"),
+                ArgumentMatchers.<AuthorDaoImpl.AuthorRowMapper>any(),
+                eq(1L)
         );
     }
 }
