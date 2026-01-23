@@ -10,10 +10,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.tuple;
 
 @SpringBootTest
 @ExtendWith(SpringExtension.class)
@@ -41,60 +43,51 @@ public class BookRepositoryIntegrationTest {
                 .isEqualTo(book.getAuthor().getName());
     }
 
-//    @Test
-//    public void testThatMultipleBooksCanBeCreatedAndRecalled() {
-//        Author authorA = TestDataUtil.createTestAuthorA();
-//        authorDao.create(authorA);
-//        Author authorB = TestDataUtil.createTestAuthorB();
-//        authorDao.create(authorB);
-//
-//        Book bookA = TestDataUtil.createTestBookA();
-//        Book bookB = TestDataUtil.createTestBookB();
-//        Book bookC = TestDataUtil.createTestBookC();
-//
-//        bookA.setAuthor_id(authorA.getId());
-//        bookB.setAuthor_id(authorB.getId());
-//        bookC.setAuthor_id(authorB.getId());
-//
-//        underTest.create(bookA);
-//        underTest.create(bookB);
-//        underTest.create(bookC);
-//
-//        List<Book> result = underTest.find();
-//        assertThat(result)
-//                .isNotNull()
-//                .containsExactly(bookA, bookB, bookC);
-//
-//    }
-//
-//    @Test
-//    public void testThatBookCanBeUpdated() {
-//        Author author = TestDataUtil.createTestAuthorA();
-//        authorDao.create(author);
-//
-//        Book bookA = TestDataUtil.createTestBookA();
-//        bookA.setAuthor_id(author.getId());
-//        underTest.create(bookA);
-//
-//        bookA.setTitle("New Title");
-//        underTest.update(bookA.getIsbn(), bookA);
-//
-//        Optional<Book> result = underTest.findOne(bookA.getIsbn());
-//        assertThat(result).isPresent();
-//        assertThat(result.get()).isEqualTo(bookA);
-//    }
-//
-//    @Test
-//    public void testThatBookCanBeDeleted() {
-//        Author author = TestDataUtil.createTestAuthorA();
-//        authorDao.create(author);
-//
-//        Book bookA = TestDataUtil.createTestBookA();
-//        bookA.setAuthor_id(author.getId());
-//        underTest.create(bookA);
-//        underTest.delete(bookA.getIsbn());
-//
-//        Optional<Book> result = underTest.findOne(bookA.getIsbn());
-//        assertThat(result).isEmpty();
-//    }
+    @Test
+    public void testThatMultipleBooksCanBeCreatedAndRecalled() {
+        Author authorA = TestDataUtil.createTestAuthorA();
+        Author authorB = TestDataUtil.createTestAuthorB();
+
+        Book bookA = TestDataUtil.createTestBookA(authorA);
+        Book bookB = TestDataUtil.createTestBookB(authorB);
+        Book bookC = TestDataUtil.createTestBookC(authorB);
+
+
+        bookA = underTest.save(bookA);
+        bookB = underTest.save(bookB);
+        bookC = underTest.save(bookC);
+
+        Iterable<Book> result = underTest.findAll();
+        assertThat(result)
+                .isNotEmpty()
+                .containsExactly(bookA, bookB, bookC);
+
+    }
+
+    @Test
+    public void testThatBookCanBeUpdated() {
+        Author author = TestDataUtil.createTestAuthorA();
+
+        Book bookA = TestDataUtil.createTestBookA(author);
+        underTest.save(bookA);
+
+        bookA.setTitle("New Title");
+        bookA = underTest.save(bookA);
+
+        Optional<Book> result = underTest.findById(bookA.getIsbn());
+        assertThat(result).isPresent();
+        assertThat(result.get()).isEqualTo(bookA);
+    }
+
+    @Test
+    public void testThatBookCanBeDeleted() {
+        Author author = TestDataUtil.createTestAuthorA();
+
+        Book bookA = TestDataUtil.createTestBookA(author);
+        bookA = underTest.save(bookA);
+        underTest.delete(bookA);
+
+        Optional<Book> result = underTest.findById(bookA.getIsbn());
+        assertThat(result).isEmpty();
+    }
 }

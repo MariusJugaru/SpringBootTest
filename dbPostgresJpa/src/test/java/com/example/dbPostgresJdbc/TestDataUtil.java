@@ -21,6 +21,13 @@ public final class TestDataUtil {
                 .build();
     }
 
+    public static Author createTestAuthorC() {
+        return Author.builder()
+                .age(32)
+                .name("Mark Chrystal")
+                .build();
+    }
+
     public static Book createTestBookA(final Author author) {
         return Book.builder()
                 .isbn("123-232")
