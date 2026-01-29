@@ -1,4 +1,4 @@
-package com.example.dbPostgresJdbc.domain;
+package com.example.dbPostgresJdbc.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 @Table(name = "authors")
-public class Author {
+public class AuthorEntity {
 
     @Id
     @SequenceGenerator(name = "author_id_seq", sequenceName = "author_id_seq")
